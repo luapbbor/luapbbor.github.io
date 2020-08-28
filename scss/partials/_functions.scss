@@ -1,0 +1,13 @@
+@import "variables";
+
+// converts pixels to percentage
+@function px-to-pc($target, $context: $max-width) {
+    @return ($target / $context) * 100%;
+  }
+
+// calculates how many items to fit per line
+@function per-line($items) {
+    $g-pct: px-to-pc($gutter);
+    $g-total: $items * $g-pct;
+    @return (100% / $items) - $g-total;
+}

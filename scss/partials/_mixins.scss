@@ -1,0 +1,13 @@
+@mixin mq($break) {
+    @if $break == 768px {
+      @media (min-width: $break-tablet) {
+        @content;
+      }
+    }
+    @else if $break == 1024px{
+        @media (min-width: $break-desktop) {
+         @content;
+        }
+    }
+}
+  
