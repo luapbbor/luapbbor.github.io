@@ -3,14 +3,10 @@
 
 
 @include mq ($break-tablet) {
-    body {
-    background-color: red;
-    }
+    
 }
 
 @include mq ($break-desktop) {
-    body {
-    background-color:green;
-    }
+    
 }
 
