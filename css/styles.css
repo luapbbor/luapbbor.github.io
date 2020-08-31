@@ -509,7 +509,7 @@ h1 {
   width: 100%;
 }
 
-/* The animation code */
+/* The animation for the intro paragraph */
 @keyframes introP {
   from {
     color: black;
