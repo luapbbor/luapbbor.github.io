@@ -1,0 +1,80 @@
+
+
+@keyframes smoky {
+   from {
+      text-shadow: 50px 50px 180px $smoke-shadow;
+      transform:
+        translate3d(-15rem,-8rem,0)
+        rotate(-40deg)
+        skewX(70deg)
+        scale(6);
+        text-shadow: 50px 50px 180px $smoke-shadow;
+        opacity: 0;
+    }
+    to {
+      transform:
+        translate3d(0,0,0)
+        rotate(0deg)
+        skewX(0deg)
+        scale(1);
+      text-shadow: 4px 4px 12px $intro-heading-font-colour;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes smoky-mirror {
+    from {
+      text-shadow: 0 0 500px $smoke-shadow; 
+      transform:
+        translate3d(18rem,-8rem,0)
+        rotate(-40deg) 
+        skewX(-70deg)
+        scale(4);
+        text-shadow: 0 0 500px $smoke-shadow;
+      opacity: 0;
+      }
+    to {
+      transform:
+        translate3d(0,0,0)
+        rotate(0) 
+        skewX(0)
+        scale(1);
+       text-shadow: 4px 4px 12px $intro-heading-font-colour;
+      opacity: 1;
+    }
+  }
+  
+  @for $item from 1 through 8 {
+    span:nth-of-type(#{$item}){ 
+      animation-delay: #{(1 + ($item/4))}s; 
+    }
+  } 
+
+
+  
+
+/* The animation for the intro paragraph */
+@keyframes introP {
+    from {color: $header-background-colour;}
+    to {color: $intro-p-colour;}  }
+
+
+// setup the animation to show the arrow
+@keyframes showArrow {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
+
+// setup the animation to make the down arrow scale in size
+@keyframes arrowPulse {
+    from {
+        transform: scale(1)
+    } 50% {
+        transform: scale(1.1);
+    } to {
+        transform: scale(1);
+    }
+}

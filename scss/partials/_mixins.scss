@@ -28,7 +28,7 @@
 }
 
 // The arguments are common flexbox properties. The settings after: are the default values.
-@mixin flexbox($display:flex, $direction:row, $wrap:nowrap, $justify: center, $align: center) {
+@mixin flexbox($display:flex, $direction:row, $wrap:wrap, $justify: center, $align: center) {
   display: $display;
   flex-direction: $direction;
   flex-wrap: $wrap;
