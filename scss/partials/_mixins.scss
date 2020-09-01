@@ -10,4 +10,39 @@
         }
     }
 }
-  
+
+
+@mixin defaultButton {
+    background-color: $card-background-colour;
+    border: none;
+    color: $body-font-colour;
+    padding: 5px;
+    border-radius: 5px; 
+    margin: 5px;
+    min-width: 40%;
+}
+
+@mixin invertButtonColours {
+  background-color: $body-font-colour;
+  color: $card-background-colour;
+}
+
+// The arguments are common flexbox properties. The settings after: are the default values.
+@mixin flexbox($display:flex, $direction:row, $wrap:nowrap, $justify: center, $align: center) {
+  display: $display;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// only 1 argument which is set to 5px by default
+@mixin borderRadius($radius:5px) {
+border-radius: $radius;
+}
+
+// takes the widht and height arguments and defaults the width to 100%, height to 0
+@mixin size($width: 100%, $height:auto) {
+  width: $width;
+  height: $height;
+}

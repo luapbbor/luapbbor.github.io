@@ -1,8 +1,9 @@
-// const downArrow = document.querySelector('.ct-js-btn-scroll');
-// downArrow.style.display = 'none';
+const cards = document.querySelectorAll(".card-inner");
 
-// function showArrow(){
-//     downArrow.style.display = 'inline-block';
-// }
+function flipCard() {
+  this.classList.toggle("flip");
+}
+cards.forEach((card) => card.addEventListener("click", flipCard));
 
-// setTimeout(showArrow, 3000);
+//You can see full tutorial here
+//https://www.ricardomoreira.io/blog/2020-06-15-flip-cards-with-javascript

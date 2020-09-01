@@ -371,41 +371,51 @@ template {
   display: none;
 }
 
-/* line 3, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 1, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_images.scss */
+img {
+  width: 90%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* line 5, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 7, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 9, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 ul {
   list-style-type: none;
 }
 
-/* line 11, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 13, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 a {
   text-decoration: none;
 }
 
-/* line 15, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 17, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 input, textarea, select {
   background-color: white;
   outline: none;
 }
 
-/* line 21, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 23, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 body {
-  color: #4DC1EA;
+  color: white;
   text-align: center;
   backface-visibility: hidden;
+  background-color: #F5F7FA;
+  font-family: "Inconsolata", monospace;
 }
 
-/* line 28, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 32, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 .header-intro {
-  background-color: black;
+  background-color: #010409;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   width: 100%;
   height: 100vh;
   margin-bottom: 0;
@@ -419,109 +429,114 @@ h1 {
 /* line 44, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 span {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   color: #1687a7;
-  font-family: 'Martel', serif;
+  font-family: "Martel", serif;
   text-shadow: 0 0 0 whitesmoke;
   animation: smoky 2s 1s both;
 }
 
-/* line 54, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 53, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 span:nth-child(even) {
   animation-name: smoky-mirror;
 }
 
 @keyframes smoky {
   from {
-    text-shadow: 10px 10px 80px whitesmoke;
+    text-shadow: 50px 50px 180px whitesmoke;
     transform: translate3d(-15rem, -8rem, 0) rotate(-40deg) skewX(70deg) scale(6);
-    text-shadow: 10px 10px 80px whitesmoke;
+    text-shadow: 50px 50px 180px whitesmoke;
     opacity: 0;
   }
   to {
     transform: translate3d(0, 0, 0) rotate(0deg) skewX(0deg) scale(1);
-    text-shadow: 0 0 0;
+    text-shadow: 4px 4px 12px #1687a7;
     opacity: 1;
   }
 }
 
 @keyframes smoky-mirror {
   from {
-    text-shadow: 0 0 180px whitesmoke;
+    text-shadow: 0 0 500px whitesmoke;
     transform: translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg) scale(4);
-    text-shadow: 0 0 180px whitesmoke;
+    text-shadow: 0 0 500px whitesmoke;
     opacity: 0;
   }
   to {
     transform: translate3d(0, 0, 0) rotate(0) skewX(0) scale(1);
-    text-shadow: 0 0 0;
+    text-shadow: 4px 4px 12px #1687a7;
     opacity: 1;
   }
 }
 
-/* line 103, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 102, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 span:nth-of-type(1) {
   animation-delay: 1.1s;
 }
 
-/* line 103, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 102, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 span:nth-of-type(2) {
   animation-delay: 1.2s;
 }
 
-/* line 103, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 102, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 span:nth-of-type(3) {
   animation-delay: 1.3s;
 }
 
-/* line 103, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 102, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 span:nth-of-type(4) {
   animation-delay: 1.4s;
 }
 
-/* line 103, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 102, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 span:nth-of-type(5) {
   animation-delay: 1.5s;
 }
 
-/* line 103, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 102, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 span:nth-of-type(6) {
   animation-delay: 1.6s;
 }
 
-/* line 103, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 102, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 span:nth-of-type(7) {
   animation-delay: 1.7s;
 }
 
-/* line 103, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 102, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 span:nth-of-type(8) {
   animation-delay: 1.8s;
 }
 
-/* line 109, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 108, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 h1 {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  font-size: 6rem;
   width: 100%;
+  height: auto;
+  font-size: 6rem;
 }
 
 /* The animation for the intro paragraph */
 @keyframes introP {
   from {
-    color: black;
+    color: #010409;
   }
   to {
     color: #7f8378;
   }
 }
 
-/* line 127, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 122, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 header p {
-  color: black;
+  color: #010409;
   font-size: 1.4em;
   animation-name: introP;
   animation-duration: 4s;
@@ -531,16 +546,7 @@ header p {
   width: 100%;
 }
 
-@keyframes showDownArrow {
-  from {
-    display: 'none';
-    opacity: 0;
-  }
-  to {
-  }
-}
-
-/* line 148, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 134, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 .scroll-container {
   width: 200px;
   height: 200px;
@@ -548,10 +554,10 @@ header p {
   margin: 20px;
 }
 
-/* line 155, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
-.test {
-  width: 100%;
-  height: 100%;
+/* line 140, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.downArrow {
+  width: 200px;
+  height: 200px;
   position: absolute;
   top: 0;
   left: 0;
@@ -568,9 +574,9 @@ header p {
   }
 }
 
-/* line 173, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 158, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 .coverArrow {
-  background-color: black;
+  background-color: #010409;
   z-index: 9;
   margin: 20px;
   /* for demo purpose  */
@@ -584,20 +590,22 @@ header p {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   to {
     transform: scale(1);
   }
 }
 
-/* line 193, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+/* line 179, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 .down-btn-scroll {
   position: absolute;
   top: 0;
   left: 0;
   display: 'inline-block';
   opacity: 1;
+  width: 49px;
+  height: 49px;
   width: 49px;
   height: 49px;
   bottom: 25%;
@@ -615,34 +623,195 @@ header p {
   animation-iteration-count: infinite;
 }
 
-/* line 221, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
-#main-section {
-  height: 100vh;
-}
-
-/* line 226, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
-.card {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: lightblue;
-  border-radius: 5px;
-  font-size: 1.4em;
-}
-
-/* line 2, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_grid.scss */
+/* line 205, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, 350px);
   grid-row-gap: 10px;
 }
 
-/* line 1, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_button.scss */
-.button {
-  background-color: white;
-  border: 1px solid black;
+/* line 212, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 1.4em;
+  margin: 20px 10px;
+  position: relative;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+  height: 100%;
+  cursor: pointer;
+}
+
+/* line 223, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.card .button {
+  margin-bottom: 20px;
+}
+
+/* line 227, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+h2 {
+  font-size: 1.6em;
+  color: #060608;
+}
+
+/* line 232, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+h3 {
   color: #4DC1EA;
+}
+
+/* line 236, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.card h2 {
+  width: 100%;
+  height: auto;
+}
+
+/* line 240, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.button {
+  background-color: #4DC1EA;
+  border: none;
+  color: white;
   padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  min-width: 40%;
+}
+
+/* This container is needed to position the front and back side */
+/* line 245, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.card-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+  text-align: center;
+  -webkit-transition: transform 0.6s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  position: relative;
+  transition: transform 0.6s;
+  -webkit-transition: transform 0.6s;
+}
+
+/* Position the front and back side */
+/* line 263, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+/* line 271, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.card-front {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #4DC1EA;
+  height: 100%;
+  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  color: white;
+}
+
+/* line 282, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.card-inner.flip {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+/* Style the back side of the card */
+/* line 290, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.card-back {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  position: absolute;
+  text-align: center;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: #252A34;
+}
+
+/* line 303, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.card-image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+}
+
+/* line 308, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.front-card-text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 20%;
+}
+
+/* line 313, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.card-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+
+/* line 318, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.card-buttons a {
+  width: 40%;
+  height: auto;
+}
+
+/* line 322, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_base.scss */
+.card-buttons:hover {
+  background-color: white;
+  color: #4DC1EA;
+}
+
+/* line 1, ../../../Documents/paulRobbPortfolio/paulrobbonline/scss/partials/_images.scss */
+img {
+  width: 90%;
+  height: auto;
   border-radius: 5px;
 }
 

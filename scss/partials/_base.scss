@@ -1,4 +1,6 @@
 @import "variables";
+@import "mixins";
+@import "images";
 
 * {
     box-sizing: border-box;
@@ -19,20 +21,18 @@ input, textarea, select{
 
 
 body {
-    color: $main-font-colour;
+    color: $body-font-colour;
     text-align: center;
     backface-visibility: hidden;
+    background-color: $main-body-colour;
+    font-family: $body-font;
     
 }
 
 .header-intro {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100vh;
+    background-color: $header-background-colour;
+    @include flexbox($wrap: wrap); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
+    @include size($height: 100vh); // 2 parameters, first is the width which is default to 100%, second is height
     margin-bottom: 0;
 }
 
@@ -42,28 +42,27 @@ h1 {
 
 
 span {
-    display: flex;
-    flex-wrap: wrap;
-    color: #1687a7;
-    font-family: 'Martel', serif;
-    text-shadow: 0 0 0 whitesmoke;
-    animation: smoky 2s 1s both;
-    
-  }
-  
+    @include flexbox($wrap: wrap); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
+    color: $intro-heading-font-colour;
+    font-family: $intro-font;
+    text-shadow: 0 0 0 $smoke-shadow;
+   animation: smoky 2s 1s both;    
+}
+ 
+// animate every second span item with the smoky-mirror animation
   span:nth-child(even){
     animation-name: smoky-mirror;
   }
   
   @keyframes smoky {
    from {
-      text-shadow: 10px 10px 80px whitesmoke;
+      text-shadow: 50px 50px 180px $smoke-shadow;
       transform:
         translate3d(-15rem,-8rem,0)
         rotate(-40deg)
         skewX(70deg)
         scale(6);
-        text-shadow: 10px 10px 80px whitesmoke;
+        text-shadow: 50px 50px 180px $smoke-shadow;
         opacity: 0;
     }
     to {
@@ -72,20 +71,20 @@ span {
         rotate(0deg)
         skewX(0deg)
         scale(1);
-      text-shadow: 0 0 0;
+      text-shadow: 4px 4px 12px $intro-heading-font-colour;
       opacity: 1;
     }
   }
   
   @keyframes smoky-mirror {
     from {
-      text-shadow: 0 0 180px whitesmoke; 
+      text-shadow: 0 0 500px $smoke-shadow; 
       transform:
         translate3d(18rem,-8rem,0)
         rotate(-40deg) 
         skewX(-70deg)
         scale(4);
-        text-shadow: 0 0 180px whitesmoke;
+        text-shadow: 0 0 500px $smoke-shadow;
       opacity: 0;
       }
     to {
@@ -94,7 +93,7 @@ span {
         rotate(0) 
         skewX(0)
         scale(1);
-       text-shadow: 0 0 0 ;
+       text-shadow: 4px 4px 12px $intro-heading-font-colour;
       opacity: 1;
     }
   }
@@ -107,25 +106,21 @@ span {
 
 
 h1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    @include flexbox($wrap: wrap); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
+    @include size(); // 2 parameters, first is the width which is default to 100%, second is height and default is auto
     font-size: 6rem;
-    width: 100%;
- 
 }
 
 
 
 /* The animation for the intro paragraph */
 @keyframes introP {
-    from {color: black;}
-    to {color: #7f8378;}  }
+    from {color: $header-background-colour;}
+    to {color: $intro-p-colour;}  }
   
 
 header p {
-    color: black;
+    color: $header-background-colour;
     font-size: 1.4em;
     animation-name: introP;
     animation-duration: 4s;
@@ -135,32 +130,22 @@ header p {
     width: 100%;
 }
 
-@keyframes showDownArrow {
-    from {
-        display: 'none';
-        opacity: 0;
-    }
-    to {
-     
-    }
-}
-
+// The container that holds the down arrow
 .scroll-container {
-    width: 200px;
-    height: 200px;
+    @include size($width:200px, $height: 200px); // 2 parameters, first is the width which is default to 100%, second is height and default is auto
     position: relative;
     margin: 20px;
 }
 
-.test {
-    width: 100%;
-        height: 100%;            
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 1;  /* for demo purpose  */
-    }
+.downArrow {
+    @include size($width:200px, $height: 200px); // 2 parameters, first is the width which is default to 100%, second is height and default is auto         
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;  /* for demo purpose  */
+}
 
+// setup the animation to show the arrow
 @keyframes showArrow {
     from {
         opacity: 1;
@@ -171,7 +156,7 @@ header p {
 
 // This covers the down arrow, but slowly displays it
 .coverArrow {
-    background-color: black;
+    background-color: $header-background-colour;
     z-index: 9;
     margin: 20px; /* for demo purpose  */
     animation-name: showArrow;
@@ -179,11 +164,12 @@ header p {
     animation-direction: forward;
 }
 
+// setup the animation to make the down arrow scale in size
 @keyframes arrowPulse {
     from {
         transform: scale(1)
     } 50% {
-        transform: scale(1.2);
+        transform: scale(1.1);
     } to {
         transform: scale(1);
     }
@@ -191,43 +177,148 @@ header p {
 
 // The down arrow on the initial screen
 .down-btn-scroll {
-         
     position: absolute;
     top: 0;
     left: 0;
     display: 'inline-block';
     opacity: 1;
+    @include size($width:49px, $height: 49px); // 2 parameters, first is the width which is default to 100%, second is height and default is auto   
     width: 49px;
-height: 49px;
-bottom: 25%;
-left: 0;
-right: 0;
-margin: auto;
-padding-top: 50px;
-z-index: 9;
-border-radius: 50%;
--webkit-transition: background-color 4s ease-in-out;
-transition: background-color 4s ease-in-out;
-animation-name: arrowPulse;
-animation-duration: 2s;
-animation-delay: 5s;
-animation-iteration-count: infinite;
-
+    height: 49px;
+    bottom: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 50px;
+    z-index: 9;
+    @include borderRadius($radius:50%); // only 1 argument which is set to 5px by default
+    -webkit-transition: background-color 4s ease-in-out;
+    transition: background-color 4s ease-in-out;
+    animation-name: arrowPulse;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
 }
 
 
-
-
-#main-section {
-    height: 100vh;
-
+// setup grid container
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, 350px);
+    grid-row-gap: 10px;
 }
 
 .card {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: lightblue;
-    border-radius: 5px;
+    @include flexbox($wrap: wrap); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
+    @include borderRadius(); // only 1 argument which is set to 5px by default
     font-size: 1.4em;
-    // width: 50%;
+    margin: 20px 10px;
+    position: relative;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    height: 100%;  
+    cursor: pointer;
+}
+
+.card .button {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: $second-font-colour;
+}
+
+h3 {
+    color: $heading-font-colour;
+}
+
+.card h2 {
+  @include size();
+}
+
+.button {
+    @include defaultButton;
+}
+
+  /* This container is needed to position the front and back side */
+  .card-inner {
+    @include flexbox($wrap: wrap); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
+    @include size($height: 100%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto   
+    @include borderRadius(); // only 1 argument which is set to 5px by default
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+    text-align: center;
+    -webkit-transition: transform 0.6s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    position: relative;
+    transition: transform 0.6s;
+    -webkit-transition: transform 0.6s; 
+  }
+  
+
+  /* Position the front and back side */
+  .card-front, .card-back {
+    @include size($height:100%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto   
+    @include borderRadius(); // only 1 argument which is set to 5px by default
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .card-front {
+    @include flexbox($wrap: wrap); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
+    background-color: $card-background-colour;
+    height: 100%;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+     color: white;
+  }
+
+
+  
+  .card-inner.flip {
+    @include flexbox($wrap:wrap);
+    @include size($height:100%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto   
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg); 
+  }
+  
+  /* Style the back side of the card */
+  .card-back {
+    @include flexbox($wrap: wrap); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
+    @include size($height:100%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    position: absolute;
+    text-align: center;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: #252A34; 
+ }
+
+  .card-image {
+    @include flexbox(); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
+    @include size($height:80%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
+  }
+
+.front-card-text {
+    @include flexbox($wrap: wrap, $align: flex-start); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
+    @include size($height:20%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
+}
+ 
+.card-buttons {
+    @include flexbox(); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
+    @include size($height:20%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
+}
+
+.card-buttons a {
+    @include size($width: 40%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
+}
+
+.card-buttons:hover{
+    @include invertButtonColours;
 }

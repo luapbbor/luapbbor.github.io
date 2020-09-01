@@ -4,53 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul Robb's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Martel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Martel&family=Inconsolata&display=swap" rel="stylesheet">
+    
      <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <header class='header-intro'>
+        <nav class="nav">
+            <ul>
+                <li><a href=</li>
+            </ul>
+        </nav>
        <h1>
         <span>P</span><span>A</span><span>U</span><span>L</span>
         <span>&nbsp;</span><span>R</span><span>O</span><span>B</span><span>B</span>
         </h1>
        <p>Front End Web Developer</p>
        <div class="scroll-container">
-       <a class="down-btn-scroll ct-js-btn-scroll test" href="#main-section"><img alt="Arrow Down Icon" src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"></a>
-    <a href="#main-section"><p class="coverArrow test"></p></a>
+       <a class="down-btn-scroll downArrow" href="#main-section"><img alt="Arrow Down Icon" src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"></a>
+    <a href="#projects"><p class="coverArrow downArrow"></p></a>
     </div>
     </header>
-    <main class="grid-container" id="main-section">
+    <main class="grid-container" id="projects">
         <section>
             <h2>My Projects</h2>
             <div class="card">
-                <div class="card-image">
-                    
-                </div>
-                <div class="card-text">
-                    <h3>Game show app</h3>
-                    <p>The project shows the power of javascript by creating a "wheel of fortune" type game.</p>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-image">
+                            <img src="img/gameShowApp.png" alt="game show app">
+                        </div>
+                        <div class="front-card-text">
+                            <p>Game Show App</p>
+                        </div>
+                    </div> <!-- end card-front -->
+                    <div class="card-back">
+                        <div class="back-card-text">
+                            <h3>Game Show App</h3>
+                            <p>The project shows the power of javascript by creating a "wheel of fortune" type game.</p>
 
-                </div>
-                <div class="card-buttons">
-                    <a href="#" class="button preview" target='blank'>Preview</a>
-                    <a href="#" class="button code" target='blank'>Code</a>
-                </div>
-            </div>
+                        </div>
+                        <div class="card-buttons">
+                            <a href="#" class="button preview" target='blank'>Preview</a>
+                            <a href="#" class="button code" target='blank'>Repo</a>
+                        </div>
+                    </div> <!-- end card-back -->
+                </div><!-- end card-inner  -->
+            </div><!-- end card  -->
             <div class="card">
-                <div class="card-image">
-                    
-                </div>
-                <div class="card-text">
-                    <h3>Game show app</h3>
-                    <p>The project shows the power of javascript by creating a "wheel of fortune" type game.</p>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-image">
+                            <img src="img/employeeDirectory.png" alt="Employee Directory">
+                        </div>
+                        <div class="front-card-text">
+                            <p>Employee Directory</p>
+                        </div>                        
+                    </div> <!-- end card-front -->
+                    <div class="card-back">
+                        <div class="back-card-text">
+                            <h3>Employee Directory</h3>
+                            <p>This project utilised the Fetch API to create a searchable employee directory.</p>
 
-                </div>
-                <div class="card-buttons">
-                    <a href="#" class="button preview" target='blank'>Preview</a>
-                    <a href="#" class="button code" target='blank'>Code</a>
-                </div>
-            </div>
+                        </div>
+                        <div class="card-buttons">
+                            <a href="#" class="button preview" target='blank'>Preview</a>
+                            <a href="#" class="button code" target='blank'>Repo</a>
+                        </div>
+                    </div> <!-- end card-back -->
+                </div><!-- end card-inner  -->
+            </div><!-- end card  -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-image">
+                            <img src='img/webAppDashboard.png' alt="web app dashboard">
+                        </div>
+                        <div class="front-card-text">
+                            <p>Web App Dashboard</p>
+                        </div>  
+                    </div> <!-- end card-front -->
+                    <div class="card-back">
+                        <div class="back-card-text">
+                            <h3>Web App Dashboard</h3>
+                            <p>An interactive dashboard that utilises javascript for graphs, css grid for layout and SVG graphics.</p>
+
+                        </div>
+                        <div class="card-buttons">
+                            <a href="#" class="button preview" target='blank'>Preview</a>
+                            <a href="#" class="button code" target='blank'>Repo</a>
+                        </div>
+                    </div> <!-- end card-back -->
+                </div><!-- end card-inner  -->
+            </div><!-- end card  -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-image">
+                            <img src="img/photoGallery.png" alt="interactive photo gallery">
+                        </div>
+                        <div class="front-card-text">
+                            <p>Photo Gallery</p>
+                        </div>                        
+                    </div> <!-- end card-front -->
+                    <div class="card-back">
+                        <div class="back-card-text">
+                            <h3>Interactive Photo Gallery</h3>
+                            <p>The project used html, css and javascript to create a responsive, interactive photo gallery.</p>
+
+                        </div>
+                        <div class="card-buttons">
+                            <a href="#" class="button preview" target='blank'>Preview</a>
+                            <a href="#" class="button code" target='blank'>Repo</a>
+                        </div>
+                    </div> <!-- end card-back -->
+                </div><!-- end card-inner  -->
+            </div><!-- end card  -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-image">
+                            <img src="img/webStyleGuide.png" alt="Web Style Guide">
+                        </div>
+                        <div class="front-card-text">
+                            <p>Web Style Guide</p>                            
+                        </div>                        
+                    </div> <!-- end card-front -->
+                    <div class="card-back">
+                        <div class="back-card-text">
+                            <h3>Web Style Guide</h3>
+                            <p>The project focused on developing skills in SASS. This site is also built using SASS.</p>
+
+                        </div>
+                        <div class="card-buttons">
+                            <a href="#" class="button preview" target='blank'>Preview</a>
+                            <a href="#" class="button code" target='blank'>Repo</a>
+                        </div>
+                    </div> <!-- end card-back -->
+                </div><!-- end card-inner  -->
+            </div><!-- end card  -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-image">
+                            <img src="img/webForm.png" alt="Responsive web form">
+                        </div>
+                        <div class="front-card-text">
+                            <p>Responsive Web Form</p>
+                        </div>
+                    </div> <!-- end card-front -->
+                    <div class="card-back">
+                        <div class="back-card-text">
+                            <h3>Responsive Web Form</h3>
+                            <p>The project was to create a responsive web form.</p>
+
+                        </div>
+                        <div class="card-buttons">
+                            <a href="#" class="button preview" target='blank'>Preview</a>
+                            <a href="#" class="button code" target='blank'>Repo</a>
+                        </div>
+                    </div> <!-- end card-back -->
+                </div><!-- end card-inner  -->
+            </div><!-- end card  -->
+            
+           
+           
         </section>
        
     </main>

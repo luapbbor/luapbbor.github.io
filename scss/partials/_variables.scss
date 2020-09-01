@@ -5,6 +5,28 @@ $break-tablet: 768px;
 $break-desktop: 1024px;
 
 
-// fonts 
+// -------------- colours ----------------------
 
-$main-font-colour: #4DC1EA;
+// background colours
+$header-background-colour: #010409;
+
+$main-body-colour: #F5F7FA;
+$card-background-colour: #4DC1EA;
+
+
+// font colours
+$intro-heading-font-colour: #1687a7;
+$heading-font-colour: #4DC1EA;
+$second-font-colour: #060608;
+$body-font-colour: white;
+$intro-p-colour: #7f8378;
+
+// shadow colours
+
+$smoke-shadow: whitesmoke;
+
+// -------------- fonts ----------------------
+
+$intro-font: 'Martel', serif;
+$body-font: 'Inconsolata', monospace;
+
