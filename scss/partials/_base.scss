@@ -29,6 +29,21 @@ body {
     
 }
 
+.nav ul{
+    @include flexbox($wrap: wrap, $justify: flex-start); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
+}
+
+.nav ul li{
+    @include size($width:42%);
+}
+
+.nav ul li a{
+    color: $intro-p-colour;
+    font-size: 1.4em;
+    padding: 0 5px;
+    border-right: 1px solid $intro-p-colour;
+}
+
 .header-intro {
     background-color: $header-background-colour;
     @include flexbox($wrap: wrap); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
