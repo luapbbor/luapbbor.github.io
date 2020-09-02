@@ -323,3 +323,27 @@ border: 5px solid $smoke-shadow;
 .circle a, .resume-container h3 {
     width: 100%;
 }
+
+.skills {
+    @include flexbox();
+    @include size();
+}
+
+.tech-skill-item{
+    @include borderRadius();
+    display:none;
+    min-height: 250px;
+    margin: 0 10px;
+    background-color: $body-font-colour;
+    box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.6);
+    border: 1px solid grey;
+}
+
+.tech-skill-item h3 {
+    @include size();
+}
+
+.tech-skill-item p {
+    color: $intro-p-colour;
+    padding: 0 10px;
+}

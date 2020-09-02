@@ -13,3 +13,7 @@ img {
    filter: grayscale(100%);
     border: 5px solid $smoke-shadow;
 }
+
+.tech-skill-item img {
+    @include size($width:15%);
+}
