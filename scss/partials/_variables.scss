@@ -20,6 +20,7 @@ $heading-font-colour: #4DC1EA;
 $second-font-colour: #060608;
 $body-font-colour: white;
 $intro-p-colour: #7f8378;
+$heading-font-colour-lighter: lighten($heading-font-colour, 25%);
 
 // shadow colours
 

@@ -64,7 +64,7 @@ span {
     color: $intro-heading-font-colour;
     font-family: $intro-font;
     text-shadow: 0 0 0 $smoke-shadow;
-   animation: smoky 2s 1s both;    
+   animation: smoky 1s both;    
 }
  
 // animate every second span item with the smoky-mirror animation
@@ -81,15 +81,12 @@ h1 {
     font-size: 6rem;
 }
 
-
-  
-
 header p {
     color: $header-background-colour;
     font-size: 1.4em;
     animation-name: introP;
-    animation-duration: 4s;
-    animation-delay: 4s;
+    animation-duration: 2s;
+    animation-delay: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     width: 100%;
@@ -117,7 +114,7 @@ header p {
     background-color: $header-background-colour;
     z-index: 9;
     animation-name: showArrow;
-    animation-duration: 5s;
+    animation-duration: 3s;
 }
 
 
@@ -130,7 +127,7 @@ header p {
     top: 0;
     left: 0;
     right: 0;
-    display: 'inline-block';
+    // display: 'inline-block';
     opacity: 1;    
     margin: auto;
     padding-top: 50px;
@@ -139,7 +136,7 @@ header p {
     transition: background-color 4s ease-in-out;
     animation-name: arrowPulse;
     animation-duration: 2s;
-    animation-delay: 5s;
+    animation-delay: 1s;
     animation-iteration-count: infinite;
 }
 
@@ -279,6 +276,13 @@ h3 {
 
 .about-me-container {
     @include flexbox(); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
-    @include size($width:90%) // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
+    @include size($width:90%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
     color:$second-font-colour;
 }
+
+h4 {
+    padding: 0 5px;
+}
+
+
+

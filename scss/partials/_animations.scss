@@ -1,5 +1,5 @@
 
-
+// The intro h1 animation affect (every odd item)
 @keyframes smoky {
    from {
       text-shadow: 50px 50px 180px $smoke-shadow;
@@ -22,6 +22,7 @@
     }
   }
   
+  // The intro h1 animation affect (every even item)
   @keyframes smoky-mirror {
     from {
       text-shadow: 0 0 500px $smoke-shadow; 
@@ -46,7 +47,7 @@
   
   @for $item from 1 through 8 {
     span:nth-of-type(#{$item}){ 
-      animation-delay: #{(1 + ($item/4))}s; 
+      animation-delay: #{(1 + ($item/6))}s; 
     }
   } 
 
