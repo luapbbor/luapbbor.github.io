@@ -22,6 +22,10 @@
     min-width: 40%;
 }
 
+@mixin resumeButton {
+  border: 1px solid $card-back-colour;
+}
+
 @mixin invertButtonColours {
   background-color: $body-font-colour;
   color: $card-background-colour;

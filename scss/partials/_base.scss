@@ -81,6 +81,11 @@ h1 {
     font-size: 6rem;
 }
 
+.first-name, .last-name {
+    @include flexbox(); // default parameters are display: flex, direction: row, wrap: wrap, justify: center, align: center
+    width:100%;
+}
+
 header p {
     color: $header-background-colour;
     font-size: 1.4em;
@@ -246,7 +251,11 @@ h3 {
     right: 0;
     left: 0;
     top: 0;
-    background-color: #252A34; 
+    background-color: $card-back-colour; 
+ }
+
+ .card-back-text {
+     padding: 0 10px;
  }
 
 .card-image {
@@ -271,18 +280,46 @@ h3 {
 
 .about-me {
     @include flexbox(); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
-    
+    background-color: $card-back-colour;
+    padding-bottom: 50px;
+}
+
+.about-me h2 {
+    color: $heading-font-colour;
+}
+
+.about-me p {
+    color: $body-font-colour;
 }
 
 .about-me-container {
     @include flexbox(); // default parameters are display: flex, direction: row, wrap: nowrap, justify: center, align: center
     @include size($width:90%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
     color:$second-font-colour;
+    
 }
 
 h4 {
     padding: 0 5px;
 }
 
+.circle {
+@include flexbox();
+@include size($width:200px, $height: 200px);
+@include borderRadius($radius:50%);
+background-color:$card-background-colour;
+border: 5px solid $smoke-shadow;
+}
 
+.resume-container {
+    @include flexbox();
+   width: 60%;
+}
 
+.resume-container h3 {
+    color: $second-font-colour
+}
+
+.circle a, .resume-container h3 {
+    width: 100%;
+}
