@@ -63,14 +63,14 @@ span {
     @include flexbox(); // default parameters are display: flex, direction: row, wrap: wrap, justify: center, align: center
     color: $intro-heading-font-colour;
     font-family: $intro-font;
-    text-shadow: 0 0 0 $smoke-shadow;
-   animation: smoky 1s both;    
+    text-shadow: 4px 4px 12px $intro-heading-font-colour;
+//    animation: smoky 1s both;    
 }
  
 // animate every second span item with the smoky-mirror animation
-  span:nth-child(even){
-    animation-name: smoky-mirror;
-  }
+//   span:nth-child(even){
+//     animation-name: smoky-mirror;
+//   }
   
   
 
@@ -153,9 +153,6 @@ header p {
     grid-row-gap: 10px;
 }
 
-section {
-    border-top: 1px solid #7f8378;
-}
 
 // the project cards
 .card {
@@ -261,13 +258,23 @@ h3 {
 
 .card-image {
     @include flexbox(); // default parameters are display: flex, direction: row, wrap: wrap, justify: center, align: center
-    @include size($height:80%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
+    @include size($height:70%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
     padding-top: 20px;
+   
   }
+
+.card-image img{
+@include size($width: 90%,$height: 100%);
+}
 
 .front-card-text {
     @include flexbox($align: flex-start); // default parameters are display: flex, direction: row, wrap: wrap, justify: center, align: center
-    @include size($height:20%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
+    @include size($height:15%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
+   
+}
+
+.front-card-text p {
+    font-size: 1.4rem;
 }
  
 .card-buttons {
@@ -366,6 +373,7 @@ border: 5px solid $smoke-shadow;
 }
 
 .contact-img {
+    width: 90%;
     height: 100px;
 }
 
