@@ -198,7 +198,7 @@ h3 {
   /* This container is needed to position the front and back side */
 .card-inner {
     @include flexbox(); // default parameters are display: flex, direction: row, wrap: wrap, justify: center, align: center
-    @include size($height: 100%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto   
+    @include size($height: 300px); // 2 parameters, first is the width which is default to 100%, second is height and default is auto   
     @include borderRadius(); // only 1 argument which is set to 5px by default
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
     margin-top: 20px;
@@ -224,8 +224,8 @@ h3 {
   /* Style the front side (fallback if image is missing) */
 .card-front {
     @include flexbox(); // default parameters are display: flex, direction: row, wrap: wrap, justify: center, align: center
+    @include size($height: 300px);
     background-color: $card-background-colour;
-    height: 100%;
     transform: rotateX(0deg);
     -webkit-transform: rotateX(0deg);
      color: white;
@@ -243,7 +243,7 @@ h3 {
   /* Style the back side of the card */
 .card-back {
     @include flexbox(); // default parameters are display: flex, direction: row, wrap: wrap, justify: center, align: center
-    @include size($height:100%); // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
+    @include size($height:300px); // 2 parameters, first is the width which is default to 100%, second is height and default is auto 
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     position: absolute;
@@ -252,9 +252,10 @@ h3 {
     left: 0;
     top: 0;
     background-color: $card-back-colour; 
+    color: white;
  }
 
- .card-back-text {
+ .back-card-text {
      padding: 0 10px;
  }
 
@@ -346,4 +347,53 @@ border: 5px solid $smoke-shadow;
 .tech-skill-item p {
     color: $intro-p-colour;
     padding: 0 10px;
+}
+
+.contact {
+    background-color: $card-back-colour;
+    padding-bottom: 50px;
+}
+
+.contact h2 {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 0 0;
+    color: $heading-font-colour;
+}
+
+.contact-container, .contact-img, .contact-icon {
+    @include flexbox();
+}
+
+.contact-img {
+    height: 100px;
+}
+
+.contact-icon {
+    filter: grayscale(100%);
+}
+
+.gmail {
+    transform: scale(0.2);
+    
+}
+
+.gmail:hover {
+    transform: scale(0.3);
+    filter: grayscale(0%);
+}
+
+
+.linkedin {
+    transform: scale(0.4);
+}
+
+
+.linkedin:hover {
+    transform: scale(0.5);
+    filter: grayscale(0%);
+}
+
+.github:hover {
+    transform: scale(1.1);
 }
