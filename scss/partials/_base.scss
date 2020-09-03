@@ -149,21 +149,28 @@ header p {
 // setup grid container
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     grid-row-gap: 10px;
 }
 
+.projects {
+    @include flexbox();
+    @include size();
+}
+
+.projects h2, .about-me h2 {
+    width: 100%;
+}
 
 // the project cards
 .card {
     @include flexbox(); // default parameters are display: flex, direction: row, wrap: wrap, justify: center, align: center
     @include borderRadius(); // only 1 argument which is set to 5px by default
+    @include size($height:100%)
     font-size: 1.4em;
     margin: 20px 10px;
     position: relative;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    height: 100%;  
-    
     cursor: pointer;
 }
 
@@ -375,6 +382,7 @@ border: 5px solid $smoke-shadow;
 .contact-img {
     width: 90%;
     height: 100px;
+  
 }
 
 .contact-icon {
@@ -383,7 +391,7 @@ border: 5px solid $smoke-shadow;
 
 .gmail {
     transform: scale(0.2);
-    
+ 
 }
 
 .gmail:hover {
@@ -394,12 +402,14 @@ border: 5px solid $smoke-shadow;
 
 .linkedin {
     transform: scale(0.4);
+   
 }
 
 
 .linkedin:hover {
     transform: scale(0.5);
     filter: grayscale(0%);
+ 
 }
 
 .github:hover {

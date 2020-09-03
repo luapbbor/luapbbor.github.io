@@ -3,6 +3,56 @@
 
 
 @include mq ($break-tablet) {
+    .nav ul{
+        @include flexbox($justify: flex-start, $wrap:nowrap); // default parameters are display: flex, direction: row, wrap: wrap, justify: center, align: center
+    }
+
+    .grid-container {
+        
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+       
+    }
+    
+    .projects {
+        @include flexbox();
+        @include size();
+    }
+
+    
+    .card {
+        @include size($width: 46%);
+    }
+    
+    .contact {
+        @include size($height: 250px);
+            padding: 0;
+    }
+
+    .contact h2 {
+        margin: 20px 0 0 0;
+    }
+
+    
+
+    .contact-container {
+        @include flexbox($wrap:nowrap);
+        @include size($height: 171px);
+        align-items: center;
+        overflow:hidden;
+       
+    }
+
+    .contact-img {
+        @include flexbox($wrap:nowrap);
+        @include size($width: 30%, $height: 100px);
+     
+    }
+
+    .contact-img:nth-child(2) {
+        transform: translateY(10px);
+    }
+
+    
    
 }
 
