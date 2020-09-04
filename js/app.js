@@ -13,7 +13,6 @@ cards.forEach((card) => card.addEventListener("click", flipCard));
 // This is the resume modal 
 // ---------------------------------------------
 
-let modalIndex = 0;
 
 // declare the default html
 let modalHTML = `<h4>Sihot Asia Pacific</h4>
@@ -46,22 +45,19 @@ function displayModal(html) {
 
 
 const modal = document.getElementById("resume-modal");
-const dot = document.querySelector(".dot");
 const closeModal = document.querySelector(".close");
-const notifications = document.querySelector("#notifications");
+
 
 // Get the button that opens the modal
 const btn = document.querySelector("#resume-modal-button");
 
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
+// // Get the <span> element that closes the modal
+// const span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 
   btn.addEventListener('click', e => {
-  // let index = modal.getAttribute('data-index');
-  // modalIndex = index;
-  modal.style.display = "flex";
+   modal.style.display = "flex";
   displayModal(modalHTML)
   });
   
@@ -88,8 +84,8 @@ window.onclick = function(event) {
 // ====================================================================
 const rightArrow = document.querySelector(".right");
 const leftArrow = document.querySelector(".left");
-const sihot = document.querySelector(".sihot");
-const ibm = document.querySelector(".ibm");
+// const sihot = document.querySelector(".sihot");
+// const ibm = document.querySelector(".ibm");
 const modalBody = document.querySelector(".modal-body");
 
 
