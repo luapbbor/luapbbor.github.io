@@ -1,10 +1,21 @@
 @import "variables";
 @import "mixins";
 
+// ------------------------------- tablet -------------------------------
 
 @include mq ($break-tablet) {
+   
+    .nav {
+        @include flexbox($justify: center);
+        @include size();
+    }
+
     .nav ul{
         @include flexbox($justify: flex-start, $wrap:nowrap); // default parameters are display: flex, direction: row, wrap: wrap, justify: center, align: center
+    }
+
+    .nav ul li {
+        padding: 0 20px;
     }
 
     .grid-container {
@@ -13,16 +24,27 @@
        
     }
     
-    .projects {
-        @include flexbox();
-        @include size();
-    }
-
+   
     
     .card {
         @include size($width: 46%);
     }
+
     
+
+    .about-me-image {
+      order: 1;
+      margin-right: 20px;
+    }
+
+    .circle {
+        order: 2;
+        margin-left: 20px;
+    }
+
+    .about-me-text {
+        order: 3;
+    }
     .contact {
         @include size($height: 250px);
             padding: 0;
@@ -31,8 +53,6 @@
     .contact h2 {
         margin: 20px 0 0 0;
     }
-
-    
 
     .contact-container {
         @include flexbox($wrap:nowrap);
@@ -48,15 +68,131 @@
      
     }
 
+    .gmail {
+        transform: scale(1.6);
+     
+    }
+    
+    .gmail:hover {
+        transform: scale(1.8);
+         filter: grayscale(0%);
+    }
+    
+    
+    .linkedin {
+      @include size($width: 48px, $height: 47px);
+      transform: scale(1.6);
+         
+    }
+    
+    .linkedin:hover {
+        transform: scale(1.8);
+        filter: grayscale(0%);
+    }
+    
+    .github {
+        transform: scale(1);
+    }
+    
+    .github:hover {
+        transform: scale(1.2);
+        filter: grayscale(0%);
+    }
+}
+
+// ------------------------------- desktop -------------------------------
+
+
+@include mq ($break-desktop) {
+
+    
+
+    .name-container, h1{
+        @include flexbox($wrap: nowrap);
+    }
+
+    h1{
+        @include size($width: 50%);
+    }
+
+    header p {
+        animation-delay: 3s;
+    }
+
+    
+
+    .grid-container {
+    grid-template-columns: 1fr;  
+    }
+
+    span {
+           animation: smoky 1s both;  
+    }
+
+    // animate every second span item with the smoky-mirror animation
+  span:nth-child(even){
+    animation-name: smoky-mirror;
+  }
+
+    .card {
+        width: 25%;
+        margin: 0 25px 25px 25px;
+    }
+
+    .about-me {
+        background-image: linear-gradient($intro-p-colour, $heading-font-colour);
+    }
+
+    .skills{
+        @include flexbox($justify: space-evenly);
+    }
+
+    .tech-skills, .personal-skills {
+        @include size($width: 30%);      
+    }
+
+    .tech-skill-item, .personal-skill-item {
+        min-height: 300px;
+    }
+
+
+
+    
+
+    .contact {
+        @include size($height: 130px);
+            padding: 0 0 20px 0;
+    }
+
+    .contact h2 {
+        margin: 20px 0 10px 0;
+    }
+
+    .contact-container {
+        @include flexbox($wrap:nowrap);
+        @include size($height: 80px);
+        align-items: center;
+        padding-bottom: 10px;
+        
+    }
+
+    .contact-img {
+        @include flexbox($wrap:nowrap);
+        @include size($width: 10%, $height: 60px);
+     
+    }
+
     .contact-img:nth-child(2) {
         transform: translateY(10px);
     }
 
-    
-   
-}
+    .personal-skills-text p {
+        color: #7f8378;
+    }
 
-@include mq ($break-desktop) {
+    .modal {
+        margin-bottom: 100px;
+    }
     
 }
 

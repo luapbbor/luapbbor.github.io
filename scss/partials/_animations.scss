@@ -47,7 +47,7 @@
   
   @for $item from 1 through 8 {
     span:nth-of-type(#{$item}){ 
-      animation-delay: #{(1 + ($item/6))}s; 
+      animation-delay: #{(1 + ($item/3))}s; 
     }
   } 
 

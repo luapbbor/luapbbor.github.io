@@ -18,3 +18,12 @@ img {
     @include size($width:15%);
 }
 
+.card-image {
+    @include size($width: 200px, $height:200px);
+    padding-bottom: 10px;
+}
+
+.card-image img {
+    @include size ();
+}
+

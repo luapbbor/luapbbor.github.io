@@ -19,12 +19,14 @@
                 <li><a href="#skills">Contact</a></li>
             </ul>
         </nav>
+        <div class='name-container'>
                <div class="first-name">
                 <h1><span>P</span><span>A</span><span>U</span><span>L</span></h1>
             </div>   
             <div class="last-name">    
                 <h1><span>&nbsp;</span><span>R</span><span>O</span><span>B</span><span>B</span></h1>
             </div> 
+        </div>
         <p>Front End Web Developer</p>
        <div class="scroll-container">
        <a class="down-btn-scroll downArrow" href="#main-section"><img alt="Arrow Down Icon" src="img/arrowDown.png"></a>
@@ -187,16 +189,16 @@
                 <div class="about-me-text">
                     <p>Hello, my name is Paul Robb, my background over the last 15 years has been helpdesk support. However, I recently finished the Front End Web Development Tech Degree through Treehouse and I love building responsive websites that have interactivity. </p>
                 </div>
+                <div class="circle">
+                    <div class="resume-container">
+                        <h3>Resume</h3>
+                        <button class="button resume-button" id="resume-modal-button">View Online</button>
+                        <a href="/files/PaulRobb_Resume.pdf" class="button resume-button" target="blank" download>Download</a>
+                        
+                    </div>  <!-- resume-container  -->
+                </div> <!-- end circle  -->
             </div> <!-- end about-me-container  -->
-            <div class="circle">
-                <div class="resume-container">
-                    <h3>Resume</h3>
-                    <button class="button resume-button" id="resume-modal-button">View Online</button>
-                    <a href="/files/PaulRobb_Resume.pdf" class="button resume-button" target="blank" download>Download</a>
                     
-                </div> <!-- end resume-container  -->
-            </div>
-            
              <!-- The Resume Modal -->
             <div id="resume-modal" class="modal">
 
@@ -267,12 +269,38 @@
                     <p>Git is a version control system for your projects. I have experience with utilising the git hub desktop GUI, github website and the command line interface. Actually, I even wrote a <a href="https://github.com/luapbbor/gitBatch.git" target="blank">"git menu tool"</a> to access common git commands from the CLI.</p>
                 </div>
         
-                <div class="personal-skills">
-                    <div class="personal-skill-item">
+                
+            </div>    <!-- end tech-skills  -->
+            <div class="personal-skills">
+                <div class="personal-skill-item">
+                    <h3>Mobile First Design</h3>
+                    <div class="personal-skills-text">
+                        <p>Mobile internet usage passed destkop usage in 2016, with this in mind, my websites are built using the mobile first mindset and expanded with "progressive enhancement".</p>
 
                     </div>
-                </div> 
-            </div>    <!-- end tech-skills  -->
+                </div>
+                <div class="personal-skill-item">
+                    <h3>Cross browser compatibility</h3>
+                    <div class="personal-skills-text">
+                        <p>Cross Browser compatibility is the ability of a website to be viewed accross different browsers. All my sites are checked for cross browser compatibility.</p>
+
+                    </div>
+                </div>
+                <div class="personal-skill-item">
+                    <h3>W3C validated code</h3>
+                    <div class="personal-skills-text">
+                        <p>W3C Validation helps you get better rankings in search engines. Errors in your code can also affect your website performance and make an impact on your sites SEO. All my HTML and CSS is validated through the W3C markup validation service. Javascript is validated through jshint.</p>
+
+                    </div>
+                </div>
+                <div class="personal-skill-item">
+                    <h3>Photography</h3>
+                    <div class="personal-skills-text">
+                        <p>I also have a Diploma in Photography, so if you need custom photography for your site, I can do this too.</p>
+
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="contact" id="contact">
@@ -281,7 +309,7 @@
             
             <div class="contact-img">
                 <a href="mailto:paulrobbonline@gmail.com">
-                    <svg class="contact-icon gmail"  xmlns="http://www.w3.org/2000/svg">
+                    <!-- <svg class="contact-icon gmail"  xmlns="http://www.w3.org/2000/svg" >
                         <defs>
                             <linearGradient x1="0.00388991071%" y1="49.997619%" x2="100.032232%" y2="49.997619%" id="linearGradient-1">
                                 <stop stop-color="#000000" stop-opacity="0.1" offset="0%"></stop>
@@ -299,20 +327,21 @@
                             <path d="M127.266847,117.020456 L7.06525206,29.7663685 C0.0213022675,24.5402122 -2.02371542,14.542348 3.20244088,7.49839817 C8.42859718,0.454448374 18.6536856,-1.13612093 25.9248596,4.09003537 L127.494071,77.9378961 L229.744955,3.18113862 C236.788905,-2.04501768 246.786769,-0.454448374 252.012926,6.81672561 C257.239082,13.8606754 255.648513,23.8585396 248.377339,29.0846959 L127.266847,117.020456 L127.266847,117.020456 Z" fill="#D54B3D"></path>
                             <path d="M238.833923,2.27224187 L238.833923,2.27224187 C243.151182,2.27224187 247.241218,4.31725955 249.967908,7.95284654 C254.285167,14.0878996 252.921822,22.4951945 247.013993,27.0396782 L127.266847,114.293766 L8.42859718,27.948575 C2.29354414,23.4040913 0.702974828,14.7695722 5.02023438,8.86174329 C7.51970044,5.45338049 11.83696,3.18113862 16.3814437,3.18113862 C19.3353582,3.18113862 22.2892726,4.09003537 24.5615145,5.90782886 L125.903502,79.5284654 L127.266847,80.4373622 L128.630192,79.5284654 L230.653852,4.77170793 C233.153318,3.18113862 235.880008,2.27224187 238.833923,2.27224187 L238.833923,2.27224187 Z M238.833923,0 C235.652784,0 232.244421,0.908896748 229.517731,2.95391443 L127.266847,77.7106719 L25.6976354,3.86281118 C22.9709451,1.8177935 19.5625823,0.908896748 16.1542195,0.908896748 C11.1552874,0.908896748 6.15635532,3.18113862 2.9752167,7.49839817 C-2.02371542,14.542348 0.0213022675,24.5402122 7.06525206,29.7663685 L127.266847,117.24768 L248.150114,29.0846959 C255.194064,23.8585396 256.784634,14.0878996 251.785701,6.81672561 C248.604563,2.27224187 243.832855,0 238.833923,0 L238.833923,0 L238.833923,0 Z" fill="#D72B27"></path>
                         </g>
-                    </svg>
+                    </svg> -->
+                    <svg class="contact-icon gmail" width="48px" height="47px" viewBox="-15 -8 48 47" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M22.288 21h-20.576c-.945 0-1.712-.767-1.712-1.712v-13.576c0-.945.767-1.712 1.712-1.712h20.576c.945 0 1.712.767 1.712 1.712v13.576c0 .945-.767 1.712-1.712 1.712zm-10.288-6.086l-9.342-6.483-.02 11.569h18.684v-11.569l-9.322 6.483zm8.869-9.914h-17.789l8.92 6.229s6.252-4.406 8.869-6.229z"/></svg>
                 </a>
             </div>            
             
             <div class="contact-img">
                 <a class="contact-link" href="https://www.linkedin.com/in/paul-robb-19b37349/" target="blank">
-                    <svg class="contact-icon linkedin"  xmlns="http://www.w3.org/2000/svg"><path d="M213.882 7.245c0-3.015 2.508-5.462 5.6-5.462h64.568c3.093 0 5.6 2.447 5.6 5.462V72.57c0 3.016-2.507 5.461-5.6 5.461h-64.568c-3.092 0-5.6-2.445-5.6-5.46V7.244z" fill="#069"/><path d="M1.785 65.652h31.62V55.27H13.23V15.665H1.785v49.987zM49.414 65.652v-34.43H37.97v34.43h11.444zm-5.721-39.13c3.99 0 6.474-2.644 6.474-5.95-.074-3.378-2.484-5.947-6.398-5.947-3.915 0-6.475 2.57-6.475 5.947 0 3.306 2.484 5.95 6.324 5.95h.075zM54.727 65.652h11.444V46.424c0-1.029.074-2.058.377-2.791.826-2.056 2.709-4.186 5.871-4.186 4.142 0 5.799 3.158 5.799 7.784v18.42H89.66V45.91c0-10.576-5.646-15.497-13.176-15.497-6.173 0-8.884 3.451-10.39 5.802h.077v-4.993H54.727c.151 3.231 0 34.43 0 34.43zM105.805 15.665H94.361v49.987h11.444V54.489l2.86-3.601 8.96 14.764h14.078l-15.056-21.373 13.174-14.54h-13.776s-9.411 13.008-10.24 14.552V15.665z"/><path d="M162.306 51.29c.151-.884.377-2.58.377-4.498 0-8.9-4.518-17.936-16.413-17.936-12.724 0-18.597 10.063-18.597 19.19 0 11.288 7.153 18.337 19.65 18.337 4.97 0 9.561-.732 13.327-2.275l-1.506-7.558c-3.088 1.024-6.25 1.537-10.164 1.537-5.345 0-10.012-2.195-10.389-6.871l23.715.072v.002zm-23.79-7.742c.301-2.938 2.26-7.273 7.153-7.273 5.194 0 6.4 4.628 6.4 7.273h-13.552zM190.93 15.665v17.304h-.151c-1.657-2.422-5.12-4.038-9.71-4.038-8.81 0-16.564 7.05-16.49 19.094 0 11.164 7.003 18.435 15.735 18.435 4.744 0 9.26-2.058 11.52-6.024h.225l.453 5.216h10.163c-.15-2.424-.302-6.61-.302-10.723V15.664h-11.444zm0 34.05c0 .88-.075 1.763-.227 2.495-.675 3.16-3.386 5.361-6.699 5.361-4.742 0-7.83-3.818-7.83-9.84 0-5.654 2.637-10.208 7.906-10.208 3.538 0 6.022 2.423 6.7 5.433.15.663.15 1.398.15 2.058v4.7z"/><path d="M236.85 65.61V31.18h-11.444v34.43h11.445zm-5.72-39.13c3.99 0 6.474-2.644 6.474-5.948-.075-3.379-2.484-5.949-6.398-5.949-3.917 0-6.475 2.57-6.475 5.949 0 3.304 2.483 5.948 6.324 5.948h.074zM243.184 65.61h11.443V46.385c0-1.028.075-2.058.377-2.792.827-2.057 2.71-4.186 5.872-4.186 4.14 0 5.797 3.157 5.797 7.786V65.61h11.443V45.869c0-10.575-5.645-15.496-13.174-15.496-6.173 0-8.884 3.45-10.39 5.8h.076v-4.992h-11.443c.149 3.23-.001 34.43-.001 34.43z" fill="#fff"/></svg>
+                    <svg class="contact-icon linkedin" xmlns="http://www.w3.org/2000/svg" width="48px" height="47px" viewBox="-15 -2 48 47"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg>
                 </a>
             </div>
 
             <div class="contact-img">
                 <a class="contact-link" href="https://github.com/luapbbor" target="blank">
                     <!-- <a href="https://iconscout.com/icons/github" target="_blank">Github Icon</a> by <a href="https://iconscout.com/contributors/alexis-doreau">Alexis Doreau</a> on <a href="https://iconscout.com">Iconscout</a> -->
-                 <svg class="contact-icon github"  xmlns="http://www.w3.org/2000/svg" width="48px" height="47px" viewBox="0 0 48 47" version="1.1"><title>Github-black</title><g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Black" class="gitHubFill" transform="translate(-700.000000, -560.000000)" fill="#000"><path d="M723.999 560C710.745 560 700 570.787 700 584.097c0 10.644 6.876 19.675 16.414 22.861 1.2.222 1.639-.522 1.639-1.16 0-.573-.021-2.088-.034-4.098-6.676 1.456-8.085-3.23-8.085-3.23-1.09-2.784-2.663-3.525-2.663-3.525-2.18-1.495.165-1.465.165-1.465 2.407.17 3.674 2.483 3.674 2.483 2.143 3.683 5.618 2.62 6.986 2.002.217-1.557.838-2.619 1.524-3.221-5.33-.609-10.932-2.675-10.932-11.908 0-2.63.934-4.781 2.47-6.466-.247-.61-1.07-3.059.235-6.377 0 0 2.015-.647 6.6 2.47 1.915-.534 3.967-.801 6.008-.811 2.039.01 4.092.277 6.01.811 4.58-3.117 6.592-2.47 6.592-2.47 1.31 3.318.486 5.767.239 6.377 1.538 1.685 2.467 3.835 2.467 6.466 0 9.256-5.611 11.293-10.957 11.89.86.744 1.629 2.213 1.629 4.462 0 3.22-.03 5.819-.03 6.61 0 .644.432 1.394 1.65 1.157C741.13 603.763 748 594.738 748 584.097c0-13.31-10.746-24.097-24.001-24.097" id="Github"/></g></g></svg>
+                 <svg class="contact-icon github"  xmlns="http://www.w3.org/2000/svg" width="48px" height="47px" viewBox="0 3 50 50" version="1.1"><title>Github-black</title><g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Black" class="gitHubFill" transform="translate(-700.000000, -560.000000)" fill="#000"><path d="M723.999 560C710.745 560 700 570.787 700 584.097c0 10.644 6.876 19.675 16.414 22.861 1.2.222 1.639-.522 1.639-1.16 0-.573-.021-2.088-.034-4.098-6.676 1.456-8.085-3.23-8.085-3.23-1.09-2.784-2.663-3.525-2.663-3.525-2.18-1.495.165-1.465.165-1.465 2.407.17 3.674 2.483 3.674 2.483 2.143 3.683 5.618 2.62 6.986 2.002.217-1.557.838-2.619 1.524-3.221-5.33-.609-10.932-2.675-10.932-11.908 0-2.63.934-4.781 2.47-6.466-.247-.61-1.07-3.059.235-6.377 0 0 2.015-.647 6.6 2.47 1.915-.534 3.967-.801 6.008-.811 2.039.01 4.092.277 6.01.811 4.58-3.117 6.592-2.47 6.592-2.47 1.31 3.318.486 5.767.239 6.377 1.538 1.685 2.467 3.835 2.467 6.466 0 9.256-5.611 11.293-10.957 11.89.86.744 1.629 2.213 1.629 4.462 0 3.22-.03 5.819-.03 6.61 0 .644.432 1.394 1.65 1.157C741.13 603.763 748 594.738 748 584.097c0-13.31-10.746-24.097-24.001-24.097" id="Github"/></g></g></svg>
                 </a>
             </div>
 

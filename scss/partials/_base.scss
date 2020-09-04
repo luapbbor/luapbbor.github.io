@@ -58,19 +58,19 @@ h1 {
     margin: 0;
 }
 
+h2 {
+    @include size();
+}
 
 span {
     @include flexbox(); // default parameters are display: flex, direction: row, wrap: wrap, justify: center, align: center
     color: $intro-heading-font-colour;
     font-family: $intro-font;
     text-shadow: 4px 4px 12px $intro-heading-font-colour;
-//    animation: smoky 1s both;    
+  
 }
  
-// animate every second span item with the smoky-mirror animation
-//   span:nth-child(even){
-//     animation-name: smoky-mirror;
-//   }
+
   
   
 
@@ -158,15 +158,13 @@ header p {
     @include size();
 }
 
-.projects h2, .about-me h2 {
-    width: 100%;
-}
+
 
 // the project cards
 .card {
     @include flexbox(); // default parameters are display: flex, direction: row, wrap: wrap, justify: center, align: center
     @include borderRadius(); // only 1 argument which is set to 5px by default
-    @include size($height:100%)
+    @include size($width: 80%);
     font-size: 1.4em;
     margin: 20px 10px;
     position: relative;
@@ -191,9 +189,7 @@ h3 {
     color: $heading-font-colour;
 }
 
-.card h2 {
-  @include size();
-}
+
 
 .button {
     @include defaultButton;
@@ -339,26 +335,32 @@ border: 5px solid $smoke-shadow;
     width: 100%;
 }
 
+.resume-button:hover {
+    transform: scale(1.1);
+    color: $intro-p-colour;
+}
+
 .skills {
     @include flexbox();
     @include size();
 }
 
-.tech-skill-item{
+.tech-skill-item, .personal-skill-item{
     @include borderRadius();
     display:none;
     min-height: 250px;
-    margin: 0 10px;
+    margin: 10px 10px;
     background-color: $body-font-colour;
     box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.6);
     border: 1px solid grey;
 }
 
-.tech-skill-item h3 {
+
+.tech-skill-item h3, .personal-skill-item h3 {
     @include size();
 }
 
-.tech-skill-item p {
+.tech-skill-item p, .personal-skill-item p {
     color: $intro-p-colour;
     padding: 0 10px;
 }
@@ -369,7 +371,7 @@ border: 5px solid $smoke-shadow;
 }
 
 .contact h2 {
-    width: 100%;
+    @include size();
     text-align: center;
     padding: 20px 0 0 0;
     color: $heading-font-colour;
@@ -379,9 +381,11 @@ border: 5px solid $smoke-shadow;
     @include flexbox();
 }
 
+
 .contact-img {
-    width: 90%;
-    height: 100px;
+    display: block;
+    width: 20%;
+    height: 50px;
   
 }
 
@@ -390,28 +394,33 @@ border: 5px solid $smoke-shadow;
 }
 
 .gmail {
-    transform: scale(0.2);
+    transform: scale(1.2);
  
 }
 
 .gmail:hover {
-    transform: scale(0.3);
-    filter: grayscale(0%);
+    transform: scale(1.3);
+     filter: grayscale(0%);
 }
 
 
 .linkedin {
-    transform: scale(0.4);
-   
+  @include size($width: 48px, $height: 47px);
+  transform: scale(1.2);
+     
 }
 
-
 .linkedin:hover {
-    transform: scale(0.5);
+    transform: scale(1.3);
     filter: grayscale(0%);
- 
+}
+
+.github {
+    transform: scale(0.6);
 }
 
 .github:hover {
-    transform: scale(1.1);
+    transform: scale(0.7);
+    filter: grayscale(0%);
 }
+

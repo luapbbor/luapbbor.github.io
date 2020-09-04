@@ -65,7 +65,7 @@ const span = document.getElementsByClassName("close")[0];
   displayModal(modalHTML)
   });
   
-console.log(modalIndex);
+
 
 
 // When the user clicks on <span> (x), close the modal
@@ -202,12 +202,12 @@ let leftCount = 0;
 
 // when the left arrow is clicked
 leftArrow.addEventListener('click', e => {
-  console.log(leftCount);
+  
   
   if (leftCount === 0) {
-    console.log("i equal 0");
+    
     leftCount = 2;
-    console.log(leftCount);
+    
     modalHTML = `<h4>Education</h4>
     <div class="education-container">
             <div class="education-institute">
@@ -282,7 +282,7 @@ leftArrow.addEventListener('click', e => {
                             <li>Collaborate with internal support teams and external vendors.</li>
                         </ul>
     `;
-    console.log(leftCount);
+   
    displayModal(modalHTML);
   } else if (leftCount=== 1) {
     leftCount = 0;
@@ -310,15 +310,15 @@ leftArrow.addEventListener('click', e => {
 });
 
 
-// skills carousel
+// tech skills carousel
 
 
-var slideIndex = 0;
+let slideIndex = 0;
 carousel();
 
 function carousel() {
-  var i;
-  var x = document.getElementsByClassName("tech-skill-item");
+  let i;
+  let x = document.getElementsByClassName("tech-skill-item");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none"; 
   }
@@ -327,3 +327,23 @@ function carousel() {
   x[slideIndex-1].style.display = "block"; 
   setTimeout(carousel, 6000); 
 }
+
+// tech skills carousel
+
+let slideIndex2 = 0;
+carousel2();
+
+function carousel2() {
+  let j;
+  let y = document.getElementsByClassName("personal-skill-item");
+  for (j = 0; j < y.length; j++) {
+    y[j].style.display = "none"; 
+  }
+  slideIndex2++;
+  if (slideIndex2 > y.length) {slideIndex2 = 1} 
+  y[slideIndex2-1].style.display = "block"; 
+  // The nested settimeout adds a 2 second delay to the second carousel
+  setTimeout(function(){ setTimeout(carousel2, 6000); }, 2000);   
+  
+}
+
